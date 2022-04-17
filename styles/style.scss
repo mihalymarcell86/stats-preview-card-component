@@ -1,0 +1,104 @@
+@use "sass:math";
+@use "variables" as *;
+@use "functions" as *;
+
+:root {
+  font-size: em(15px, 16px);
+}
+
+@include reset;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-inline: 24px;
+
+  font-family: "Inter", sans-serif;
+  background-color: color(main-background);
+  color: color(main-paragraph);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: color(card-background);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card__img-wrapper {
+  background-color: color(accent);
+  font-size: 0;
+  //to eliminate space between the wrapper and the image
+}
+
+.card__img {
+  max-width: 100%;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+}
+
+.card__content-wrapper {
+  padding: rem(40px) 32px 32px;
+}
+
+.card__heading {
+  @include setFont(rem(28px), 32, 700);
+  color: color(main-heading);
+  text-align: center;
+  margin-bottom: em(16px, 28px);
+}
+
+.emphasis {
+  font-style: normal;
+  color: color(accent);
+}
+
+.card__text {
+  @include setFont(rem(15px), 25);
+  text-align: center;
+  margin-bottom: em(40px, 15px);
+}
+
+.card__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__stats .stats__item:not(:last-child) {
+  margin-bottom: rem(24px);
+}
+
+.stat__num {
+  display: block;
+  @include setFont(rem(24px), 29.05, 700);
+  text-align: center;
+  color: color(main-heading);
+  margin-bottom: em(2px, 24px);
+}
+
+.stat__heading {
+  display: block;
+  font-family: "Lexend Deca", sans-serif;
+  @include setFont(rem(12px), 25);
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: color(stat-headings);
+}
+
+//original code
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

@@ -1,0 +1,112 @@
+:root {
+  font-size: 0.9375em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-inline: 24px;
+  font-family: "Inter", sans-serif;
+  background-color: hsl(233deg, 47%, 7%);
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(244deg, 38%, 16%);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card__img-wrapper {
+  background-color: hsl(277deg, 64%, 61%);
+  font-size: 0;
+}
+
+.card__img {
+  max-width: 100%;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+}
+
+.card__content-wrapper {
+  padding: 2.6666666667rem 32px 32px;
+}
+
+.card__heading {
+  font-size: 1.8666666667rem;
+  line-height: 1.1428571429;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+  margin-bottom: 0.5714285714em;
+}
+
+.emphasis {
+  font-style: normal;
+  color: hsl(277deg, 64%, 61%);
+}
+
+.card__text {
+  font-size: 1rem;
+  line-height: 1.6666666667;
+  text-align: center;
+  margin-bottom: 2.6666666667em;
+}
+
+.card__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__stats .stats__item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.stat__num {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.2104166667;
+  font-weight: 700;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 0.0833333333em;
+}
+
+.stat__heading {
+  display: block;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.8rem;
+  line-height: 2.0833333333;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
